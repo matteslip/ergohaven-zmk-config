@@ -5,15 +5,27 @@
 #include <dt-bindings/zmk/outputs.h>
 
 / {
+    behaviors {
+        hrm: hrm {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HRM";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            flavor = "balanced";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
         base {
             bindings = <
-&kp ESC    &kp Q  &kp W      &kp E       &kp R         &kp T                                                &kp Y        &kp U     &kp I      &kp O     &kp P      &kp BACKSLASH
-&kp TAB    &kp A  &kp S      &kp D       &kp F         &kp G                                                &kp H        &kp J     &kp K      &kp L     &kp SEMI   &kp SQT
-&kp LCTRL  &kp Z  &kp X      &kp C       &kp V         &kp B                                                &kp N        &kp M     &kp COMMA  &kp DOT   &kp SLASH  &kp RCTRL
-                  &kp GRAVE  &kp DELETE  &kp LEFT_GUI  &lt 1 SPACE  &kp BACKSPACE    &mt RIGHT_SHIFT ENTER  &lt 2 SPACE  &kp LALT  &kp LBKT   &kp RBKT
+&kp ESC   &kp Q              &kp W         &kp E            &kp R            &kp T                                                &kp Y        &kp U                   &kp I         &kp O             &kp P                &kp BACKSLASH
+&kp TAB   &hrm A LEFT_SHIFT  &hrm S LCTRL  &hrm LEFT_GUI D  &hrm F LEFT_ALT  &kp G                                                &kp H        &hrm J RIGHT_SHIFT      &hrm K RCTRL  &hrm L RIGHT_GUI  &hrm SEMI RIGHT_ALT  &kp SQT
+&kp CAPS  &kp Z              &kp X         &kp C            &kp V            &kp B                                                &kp N        &kp M                   &kp COMMA     &kp DOT           &kp SLASH            &kp RCTRL
+                             &kp GRAVE     &kp DELETE       &kp LEFT_GUI     &lt 1 SPACE  &kp BACKSPACE    &mt RIGHT_SHIFT ENTER  &lt 2 SPACE  &mt CAPS RS(RIGHT_GUI)  &kp LBKT      &kp RBKT
             >;
 
             display-name = "Base";
