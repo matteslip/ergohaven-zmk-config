@@ -15,6 +15,34 @@
             tapping-term-ms = <160>;
             flavor = "balanced";
         };
+
+        hml: hml {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HML";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            hold-trigger-key-positions = <6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35 42 43 44 45 41>;
+            tapping-term-ms = <280>;
+            require-prior-idle-ms = <125>;
+            quick-tap-ms = <175>;
+            flavor = "balanced";
+            hold-trigger-on-release;
+        };
+
+        hmr: hmr {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HMR";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <280>;
+            require-prior-idle-ms = <125>;
+            quick-tap-ms = <175>;
+            flavor = "balanced";
+            hold-trigger-on-release;
+            hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38 39 40>;
+        };
     };
 
     keymap {
@@ -23,7 +51,7 @@
         base {
             bindings = <
 &kp ESC   &kp Q          &kp W                &kp E            &kp R            &kp T                                                           &kp Y                         &kp U               &kp I                 &kp O             &kp P                &kp BACKSLASH
-&kp TAB   &hrm LSHIFT A  &hrm LEFT_CONTROL S  &hrm LEFT_GUI D  &hrm LEFT_ALT F  &kp G                                                           &kp H                         &hrm RIGHT_SHIFT J  &hrm RIGHT_CONTROL K  &hrm RIGHT_GUI L  &hrm RIGHT_ALT SEMI  &kp SQT
+&kp TAB   &hml LSHIFT A  &hml LEFT_CONTROL S  &hml LEFT_GUI D  &hml LEFT_ALT F  &kp G                                                           &kp H                         &hmr RIGHT_SHIFT J  &hmr RIGHT_CONTROL K  &hmr RIGHT_GUI L  &hmr RIGHT_ALT SEMI  &kp SQT
 &kp CAPS  &kp Z          &kp X                &kp C            &kp V            &kp B                                                           &kp N                         &kp M               &kp COMMA             &kp DOT           &kp SLASH            &mo 4
                          &kp GRAVE            &kp DELETE       &lt 1 SPACE      &kp BACKSPACE  &kp LA(LG(LEFT_SHIFT))    &mt RIGHT_SHIFT ENTER  &mt RG(RIGHT_SHIFT) CAPSLOCK  &lt 2 SPACE         &kp LEFT_BRACKET      &kp RBKT
             >;
