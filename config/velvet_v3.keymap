@@ -50,10 +50,10 @@
 
         base {
             bindings = <
-&kp ESC   &kp Q          &kp W                &kp E            &kp R            &kp T                                                           &kp Y                         &kp U               &kp I                 &kp O             &kp P                &kp BACKSLASH
-&kp TAB   &hml LSHIFT A  &hml LEFT_CONTROL S  &hml LEFT_GUI D  &hml LEFT_ALT F  &kp G                                                           &kp H                         &hmr RIGHT_SHIFT J  &hmr RIGHT_CONTROL K  &hmr RIGHT_GUI L  &hmr RIGHT_ALT SEMI  &kp SQT
-&kp CAPS  &kp Z          &kp X                &kp C            &kp V            &kp B                                                           &kp N                         &kp M               &kp COMMA             &kp DOT           &kp SLASH            &mo 4
-                         &kp GRAVE            &kp DELETE       &lt 1 SPACE      &kp BACKSPACE  &kp LA(LG(LEFT_SHIFT))    &mt RIGHT_SHIFT ENTER  &mt RG(RIGHT_SHIFT) CAPSLOCK  &lt 2 SPACE         &kp LEFT_BRACKET      &kp RBKT
+&kp ESC   &kp Q          &kp W                &kp E            &kp R            &kp T                                                           &kp Y                         &kp U             &kp I             &kp O         &kp P                  &kp BACKSLASH
+&kp TAB   &hml LSHIFT A  &hml LEFT_CONTROL S  &hml LEFT_GUI D  &hml LEFT_ALT F  &kp G                                                           &kp H                         &hmr RIGHT_ALT J  &hmr RIGHT_GUI K  &hmr RCTRL L  &hmr RIGHT_SHIFT SEMI  &kp SQT
+&kp CAPS  &kp Z          &kp X                &kp C            &kp V            &kp B                                                           &kp N                         &kp M             &kp COMMA         &kp DOT       &kp SLASH              &mo 4
+                         &kp GRAVE            &kp DELETE       &lt 1 SPACE      &kp BACKSPACE  &kp LA(LG(LEFT_SHIFT))    &mt RIGHT_SHIFT ENTER  &mt RG(RIGHT_SHIFT) CAPSLOCK  &lt 2 SPACE       &kp LEFT_BRACKET  &kp RBKT
             >;
 
             display-name = "Base";
@@ -94,10 +94,10 @@
 
         num {
             bindings = <
-&trans  &kp KP_MULTIPLY  &kp KP_N7  &kp KP_N8   &kp KP_N9  &kp KP_MINUS                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp KP_DIVIDE    &kp KP_N4  &kp KP_N5   &kp KP_N6  &kp KP_COMMA                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp KP_PLUS      &kp KP_N1  &kp KP_N2   &kp KP_N3  &kp KP_EQUAL                    &trans  &trans  &trans  &trans  &trans  &trans
-                         &kp KP_N0  &kp KP_DOT  &trans     &trans        &trans    &trans  &trans  &trans  &trans  &trans
+&trans  &kp KP_MULTIPLY  &kp KP_N7  &kp KP_N8   &kp KP_N9  &kp KP_MINUS                    &trans  &trans          &trans          &trans        &trans           &trans
+&trans  &kp KP_DIVIDE    &kp KP_N4  &kp KP_N5   &kp KP_N6  &kp KP_COMMA                    &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &trans
+&trans  &kp KP_PLUS      &kp KP_N1  &kp KP_N2   &kp KP_N3  &kp KP_EQUAL                    &trans  &trans          &trans          &trans        &trans           &trans
+                         &kp KP_N0  &kp KP_DOT  &trans     &trans        &trans    &trans  &trans  &trans          &trans          &trans
             >;
 
             display-name = "Numpad";
