@@ -45,6 +45,15 @@
         };
     };
 
+    combos {
+        compatible = "zmk,combos";
+
+        pastmac {
+            bindings = <&kp LS(LC(LEFT_GUI))>;
+            key-positions = <44 45>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
