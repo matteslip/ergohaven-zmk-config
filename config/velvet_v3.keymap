@@ -48,7 +48,7 @@
     combos {
         compatible = "zmk,combos";
 
-        pastmac {
+        pastemac {
             bindings = <&kp LS(LC(LEFT_GUI))>;
             key-positions = <44 45>;
         };
