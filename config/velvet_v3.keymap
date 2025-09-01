@@ -59,10 +59,10 @@
 
         base {
             bindings = <
-&kp ESC   &kp Q          &kp W                &kp E            &kp R            &kp T                                                           &kp Y                         &kp U             &kp I             &kp O         &kp P                  &kp BACKSLASH
-&kp TAB   &hml LSHIFT A  &hml LEFT_CONTROL S  &hml LEFT_GUI D  &hml LEFT_ALT F  &kp G                                                           &kp H                         &hmr RIGHT_ALT J  &hmr RIGHT_GUI K  &hmr RCTRL L  &hmr RIGHT_SHIFT SEMI  &kp SQT
-&kp CAPS  &kp Z          &kp X                &kp C            &kp V            &kp B                                                           &kp N                         &kp M             &kp COMMA         &kp DOT       &kp SLASH              &mo 4
-                         &kp GRAVE            &kp DELETE       &lt 1 SPACE      &kp BACKSPACE  &kp LA(LG(LEFT_SHIFT))    &mt RIGHT_SHIFT ENTER  &mt RG(RIGHT_SHIFT) CAPSLOCK  &lt 2 SPACE       &kp LEFT_BRACKET  &kp RBKT
+&kp ESC   &kp Q          &kp W                &kp E            &kp R            &kp T                                                 &kp Y                         &kp U             &kp I             &kp O         &kp P                  &kp LEFT_BRACKET
+&kp TAB   &hml LSHIFT A  &hml LEFT_CONTROL S  &hml LEFT_GUI D  &hml LEFT_ALT F  &kp G                                                 &kp H                         &hmr RIGHT_ALT J  &hmr RIGHT_GUI K  &hmr RCTRL L  &hmr RIGHT_SHIFT SEMI  &kp SQT
+&kp CAPS  &kp Z          &kp X                &kp C            &kp V            &kp B                                                 &kp N                         &kp M             &kp COMMA         &kp DOT       &kp SLASH              &kp RIGHT_BRACKET
+                         &kp GRAVE            &kp DELETE       &lt 1 SPACE      &kp BACKSPACE  &kp LA(LG(LEFT_SHIFT))    &lt 4 ENTER  &mt RG(RIGHT_SHIFT) CAPSLOCK  &lt 2 SPACE       &kp MINUS         &kp EQUAL
             >;
 
             display-name = "Base";
@@ -73,7 +73,7 @@
 &trans  &kp N1  &kp N2    &kp N3   &kp N4   &kp N5                     &kp N6    &kp N7        &kp N8         &kp N9       &kp N0         &trans
 &trans  &trans  &trans    &trans   &trans   &kp RET                    &trans    &kp LEFT      &kp DOWN       &kp UP       &kp RIGHT      &trans
 &trans  &trans  &kp HOME  &kp INS  &kp END  &kp DEL                    &kp CLCK  &kp LC(LEFT)  &kp PAGE_DOWN  &kp PAGE_UP  &kp LC(RIGHT)  &trans
-                &trans    &trans   &trans   &trans   &trans    &trans  &trans    &mo 3         &trans         &trans
+                &trans    &trans   &trans   &trans   &trans    &trans  &trans    &trans        &trans         &trans
             >;
 
             display-name = "Navigation";
@@ -84,7 +84,7 @@
 &trans  &trans    &kp LT    &kp EQUAL  &kp GT    &kp GRAVE                      &kp CARET  &kp DQT   &kp UNDER  &kp SQT   &trans    &trans
 &trans  &kp BSLH  &kp LPAR  &kp MINUS  &kp RPAR  &kp PLUS                       &kp PRCNT  &kp LBRC  &kp SEMI   &kp RBRC  &kp EXCL  &kp QUESTION
 &trans  &trans    &kp STAR  &kp COLON  &kp FSLH  &kp DLLR                       &kp AT     &kp PIPE  &kp TILDE  &kp AMPS  &trans    &trans
-                  &trans    &trans     &mo 3     &trans     &kp HASH    &trans  &trans     &trans    &trans     &trans
+                  &trans    &trans     &trans    &trans     &kp HASH    &trans  &trans     &trans    &trans     &trans
             >;
 
             display-name = "Symbols";
@@ -103,10 +103,10 @@
 
         num {
             bindings = <
-&trans  &kp KP_MULTIPLY  &kp KP_N7  &kp KP_N8   &kp KP_N9  &kp KP_MINUS                    &trans  &trans          &trans          &trans        &trans           &trans
-&trans  &kp KP_DIVIDE    &kp KP_N4  &kp KP_N5   &kp KP_N6  &kp KP_COMMA                    &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &trans
-&trans  &kp KP_PLUS      &kp KP_N1  &kp KP_N2   &kp KP_N3  &kp KP_EQUAL                    &trans  &trans          &trans          &trans        &trans           &trans
-                         &kp KP_N0  &kp KP_DOT  &trans     &trans        &trans    &trans  &trans  &trans          &trans          &trans
+&kp KP_NLCK  &kp KP_MULTIPLY  &kp KP_N7  &kp KP_N8   &kp KP_N9  &kp KP_MINUS                    &trans  &trans          &trans          &trans        &trans           &trans
+&trans       &kp KP_DIVIDE    &kp KP_N4  &kp KP_N5   &kp KP_N6  &kp KP_COMMA                    &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &trans
+&trans       &kp KP_PLUS      &kp KP_N1  &kp KP_N2   &kp KP_N3  &kp KP_EQUAL                    &trans  &trans          &trans          &trans        &trans           &trans
+                              &kp KP_N0  &kp KP_DOT  &trans     &trans        &trans    &trans  &trans  &trans          &trans          &trans
             >;
 
             display-name = "Numpad";
@@ -143,6 +143,15 @@
             >;
 
             display-name = "User3";
+        };
+    };
+
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+
+        adj {
+            if-layers = <1 2>;
+            then-layer = <3>;
         };
     };
 };
