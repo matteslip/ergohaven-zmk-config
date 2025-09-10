@@ -22,7 +22,7 @@
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            hold-trigger-key-positions = <6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35 42 43 44 45 41 28 27 26 12>;
+            hold-trigger-key-positions = <6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35 42 43 44 45 41 28 27>;
             tapping-term-ms = <280>;
             require-prior-idle-ms = <125>;
             quick-tap-ms = <175>;
@@ -51,6 +51,13 @@
 
             #binding-cells = <2>;
             tapping-term-ms = <180>;
+        };
+
+        ctrlS: ctrlS {
+            compatible = "zmk,behavior-tap-dance";
+            label = "CTRLS";
+            #binding-cells = <0>;
+            bindings = <&hml LEFT_CONTROL S>, <&kp LC(S)>;
         };
     };
 
@@ -97,10 +104,10 @@
 
         base {
             bindings = <
-&kp ESC     &kp Q          &kp W                &kp E            &kp R            &kp T                              &kp Y                          &kp U             &kp I             &kp O         &kp P                  &kp LEFT_BRACKET
-&kp TAB     &hml LSHIFT A  &hml LEFT_CONTROL S  &hml LEFT_GUI D  &hml LEFT_ALT F  &kp G                              &kp H                          &hmr RIGHT_ALT J  &hmr RIGHT_GUI K  &hmr RCTRL L  &hmr RIGHT_SHIFT SEMI  &kp SQT
-&caps_word  &kp Z          &kp X                &kp C            &kp V            &kp B                              &kp N                          &kp M             &kp COMMA         &kp DOT       &as SLASH              &kp RIGHT_BRACKET
-                           &kp GRAVE            &kp DELETE       &lt 1 SPACE      &kp BACKSPACE  &to 4    &kp ENTER  &mt RC(RIGHT_SHIFT) RG(SPACE)  &lt 2 SPACE       &kp MINUS         &kp EQUAL
+&kp ESC     &kp Q          &kp W      &kp E            &kp R            &kp T                              &kp Y                          &kp U             &kp I             &kp O         &kp P                  &kp LEFT_BRACKET
+&kp TAB     &hml LSHIFT A  &ctrlS     &hml LEFT_GUI D  &hml LEFT_ALT F  &kp G                              &kp H                          &hmr RIGHT_ALT J  &hmr RIGHT_GUI K  &hmr RCTRL L  &hmr RIGHT_SHIFT SEMI  &kp SQT
+&caps_word  &kp Z          &kp X      &kp C            &kp V            &kp B                              &kp N                          &kp M             &kp COMMA         &kp DOT       &as SLASH              &kp RIGHT_BRACKET
+                           &kp GRAVE  &kp DELETE       &lt 1 SPACE      &kp BACKSPACE  &to 4    &kp ENTER  &mt RC(RIGHT_SHIFT) RG(SPACE)  &lt 2 SPACE       &kp MINUS         &kp EQUAL
             >;
 
             display-name = "Base";
