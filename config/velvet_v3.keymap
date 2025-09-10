@@ -59,7 +59,7 @@
             #binding-cells = <0>;
             bindings = <&hml LEFT_CONTROL S>, <&kp LC(S)>;
 
-            tapping-term-ms = <110>;
+            tapping-term-ms = <140>;
         };
     };
 
