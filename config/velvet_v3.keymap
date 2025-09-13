@@ -106,7 +106,7 @@
             bindings = <&secoBack>, <&kp LEFT_PARENTHESIS>;
 
             #binding-cells = <0>;
-            mods = <(MOD_LCTL|MOD_LGUI)>;
+            mods = <(MOD_LCTL|MOD_LALT)>;
         };
 
         coBackPar: coBackPar {
@@ -115,7 +115,7 @@
             bindings = <&coBack>, <&kp RIGHT_PARENTHESIS>;
 
             #binding-cells = <0>;
-            mods = <(MOD_LCTL|MOD_LGUI)>;
+            mods = <(MOD_LCTL|MOD_LALT)>;
         };
     };
 
