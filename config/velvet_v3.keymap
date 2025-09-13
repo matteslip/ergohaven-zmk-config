@@ -50,51 +50,70 @@
             bindings = <&shift>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <180>;
-        };
-
-        ctrlS: ctrlS {
-            compatible = "zmk,behavior-tap-dance";
-            label = "CTRLS";
-            #binding-cells = <0>;
-            bindings = <&hml LEFT_CONTROL S>, <&kp LC(S)>;
-
-            tapping-term-ms = <160>;
+            tapping-term-ms = <170>;
         };
 
         Semicolon: Semicolon {
             compatible = "zmk,behavior-tap-dance";
             label = "SEMICOLON";
             #binding-cells = <0>;
-            bindings = <&mt QUESTION COMMA>, <&kp SEMICOLON>;
+            bindings = <&fmt QUESTION COMMA>, <&kp SEMICOLON>;
 
-            tapping-term-ms = <170>;
+            tapping-term-ms = <180>;
         };
 
         Colon: Colon {
             compatible = "zmk,behavior-tap-dance";
             label = "COLON";
             #binding-cells = <0>;
-            tapping-term-ms = <170>;
-            bindings = <&mt EXCL DOT>, <&kp COLON>;
+            tapping-term-ms = <180>;
+            bindings = <&fmt EXCL DOT>, <&kp COLON>;
         };
 
-        semicolonBack: semicolonBack {
+        secoBack: secoBack {
             compatible = "zmk,behavior-mod-morph";
-            label = "SEMICOLONBACK";
+            label = "SECOBACK";
             bindings = <&Semicolon>, <&kp LEFT_BRACKET>;
 
             #binding-cells = <0>;
             mods = <(MOD_LCTL)>;
         };
 
-        colonBack: colonBack {
+        coBack: coBack {
             compatible = "zmk,behavior-mod-morph";
-            label = "COLONBACK";
+            label = "COBACK";
             bindings = <&Colon>, <&kp RIGHT_BRACKET>;
 
             #binding-cells = <0>;
             mods = <(MOD_LCTL)>;
+        };
+
+        fmt: fmt {
+            compatible = "zmk,behavior-hold-tap";
+            label = "FMT";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <170>;
+            flavor = "tap-preferred";
+        };
+
+        secoBackPar: secoBackPar {
+            compatible = "zmk,behavior-mod-morph";
+            label = "SECOBACKPAR";
+            bindings = <&secoBack>, <&kp LEFT_PARENTHESIS>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LALT)>;
+        };
+
+        coBackPar: coBackPar {
+            compatible = "zmk,behavior-mod-morph";
+            label = "COBACKPAR";
+            bindings = <&coBack>, <&kp RIGHT_PARENTHESIS>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LALT)>;
         };
     };
 
@@ -143,7 +162,7 @@
             bindings = <
 &kp ESC     &kp Q          &kp W                &kp E            &kp R            &kp T                              &kp Y                          &kp U             &kp I             &kp O         &kp P                  &kp LEFT_BRACKET
 &kp TAB     &hml LSHIFT A  &hml LEFT_CONTROL S  &hml LEFT_GUI D  &hml LEFT_ALT F  &kp G                              &kp H                          &hmr RIGHT_ALT J  &hmr RIGHT_GUI K  &hmr RCTRL L  &hmr RIGHT_SHIFT SEMI  &kp SQT
-&caps_word  &kp Z          &kp X                &kp C            &kp V            &kp B                              &kp N                          &kp M             &semicolonBack    &colonBack    &as SLASH              &kp RIGHT_BRACKET
+&caps_word  &kp Z          &kp X                &kp C            &kp V            &kp B                              &kp N                          &kp M             &secoBackPar      &coBackPar    &as SLASH              &kp RIGHT_BRACKET
                            &kp GRAVE            &kp DELETE       &lt 1 SPACE      &kp BACKSPACE  &kp ENTER    &sl 4  &mt RC(RIGHT_SHIFT) RG(SPACE)  &lt 2 SPACE       &kp MINUS         &kp EQUAL
             >;
 
@@ -152,10 +171,10 @@
 
         nav {
             bindings = <
-&trans  &as N1                 &as N2                   &as N3               &as N4               &as N5                     &as N6    &as N7        &as N8         &as N9       &as N0         &trans
-&trans  &hml LEFT_SHIFT LC(A)  &hml LEFT_CONTROL RC(S)  &hml LEFT_GUI LC(D)  &hml LEFT_ALT LC(F)  &kp RET                    &trans    &kp LEFT      &kp DOWN       &kp UP       &kp RIGHT      &trans
-&trans  &kp INSERT             &kp LC(X)                &kp LC(C)            &kp LC(V)            &kp DEL                    &kp CLCK  &kp LC(LEFT)  &kp PAGE_DOWN  &kp PAGE_UP  &kp LC(RIGHT)  &trans
-                               &kp HOME                 &kp END              &trans               &trans   &trans    &trans  &trans    &trans        &trans         &trans
+&trans   &as N1                 &as N2                   &as N3               &as N4               &as N5                     &as N6    &as N7        &as N8         &as N9       &as N0         &trans
+&trans   &hml LEFT_SHIFT LC(A)  &hml LEFT_CONTROL RC(S)  &hml LEFT_GUI LC(D)  &hml LEFT_ALT LC(F)  &kp RET                    &trans    &kp LEFT      &kp DOWN       &kp UP       &kp RIGHT      &trans
+&kp INS  &kp LC(Z)              &kp LC(X)                &kp LC(C)            &kp LC(V)            &kp DEL                    &kp CLCK  &kp LC(LEFT)  &kp PAGE_DOWN  &kp PAGE_UP  &kp LC(RIGHT)  &trans
+                                &kp HOME                 &kp END              &trans               &trans   &trans    &trans  &trans    &trans        &trans         &trans
             >;
 
             display-name = "Navigation";
