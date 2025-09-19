@@ -150,7 +150,21 @@
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            hold-trigger-key-positions = <6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35 42 43 44 45 41 40 27 28>;
+            hold-trigger-key-positions = <6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35 42 43 44 45 41 40>;
+            tapping-term-ms = <280>;
+            require-prior-idle-ms = <125>;
+            quick-tap-ms = <175>;
+            flavor = "balanced";
+            hold-trigger-on-release;
+        };
+
+        hmlct: hmlct {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HMLCT";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            hold-trigger-key-positions = <6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35 42 43 44 45 41 27 28>;
             tapping-term-ms = <280>;
             require-prior-idle-ms = <125>;
             quick-tap-ms = <175>;
@@ -202,10 +216,10 @@
 
         base {
             bindings = <
-&kp ESC     &kp Q                &kp W                &kp E            &kp R            &kp T                                             &kp Y                          &kp U             &kp I             &kp O         &kp P                  &kp LEFT_BRACKET
-&kp TAB     &hmlsh LEFT_SHIFT A  &hml LEFT_CONTROL S  &hml LEFT_GUI D  &hml LEFT_ALT F  &kp G                                             &kp H                          &hmr RIGHT_ALT J  &hmr RIGHT_GUI K  &hmr RCTRL L  &hmr RIGHT_SHIFT SEMI  &kp SQT
-&caps_word  &kp Z                &kp X                &kp C            &kp V            &kp B                                             &kp N                          &kp M             &kp COMMA         &kp DOT       &as SLASH              &kp RIGHT_BRACKET
-                                 &kp GRAVE            &kp DELETE       &lt 1 SPACE      &kp BACKSPACE  &senter LEFT_SHIFT ENTER    &sl 4  &mt RC(RIGHT_SHIFT) RG(SPACE)  &lt 2 SPACE       &kp MINUS         &kp EQUAL
+&kp ESC     &kp Q                &kp W                  &kp E            &kp R            &kp T                                             &kp Y                          &kp U             &kp I             &kp O         &kp P                  &kp LEFT_BRACKET
+&kp TAB     &hmlsh LEFT_SHIFT A  &hmlct LEFT_CONTROL S  &hml LEFT_GUI D  &hml LEFT_ALT F  &kp G                                             &kp H                          &hmr RIGHT_ALT J  &hmr RIGHT_GUI K  &hmr RCTRL L  &hmr RIGHT_SHIFT SEMI  &kp SQT
+&caps_word  &kp Z                &kp X                  &kp C            &kp V            &kp B                                             &kp N                          &kp M             &kp COMMA         &kp DOT       &as SLASH              &kp RIGHT_BRACKET
+                                 &kp GRAVE              &kp DELETE       &lt 1 SPACE      &kp BACKSPACE  &senter LEFT_SHIFT ENTER    &sl 4  &mt RC(RIGHT_SHIFT) RG(SPACE)  &lt 2 SPACE       &kp MINUS         &kp EQUAL
             >;
 
             display-name = "Base";
@@ -213,10 +227,10 @@
 
         nav {
             bindings = <
-&trans   &as N1                   &as N2                   &as N3               &as N4               &as N5                     &as N6    &as N7        &as N8         &as N9       &as N0         &trans
-&trans   &hmlsh LEFT_SHIFT LC(A)  &hml LEFT_CONTROL RC(S)  &hml LEFT_GUI LC(D)  &hml LEFT_ALT LC(F)  &kp RET                    &trans    &kp LEFT      &kp DOWN       &kp UP       &kp RIGHT      &trans
-&kp INS  &kp LC(Z)                &kp LC(X)                &kp LC(C)            &kp LC(V)            &kp DEL                    &kp CLCK  &kp LC(LEFT)  &kp PAGE_DOWN  &kp PAGE_UP  &kp LC(RIGHT)  &trans
-                                  &kp HOME                 &kp END              &trans               &trans   &trans    &trans  &trans    &trans        &trans         &trans
+&trans   &as N1                   &as N2                     &as N3               &as N4               &as N5                     &as N6    &as N7        &as N8         &as N9       &as N0         &trans
+&trans   &hmlsh LEFT_SHIFT LC(A)  &hmlct LEFT_CONTROL RC(S)  &hml LEFT_GUI LC(D)  &hml LEFT_ALT LC(F)  &kp RET                    &trans    &kp LEFT      &kp DOWN       &kp UP       &kp RIGHT      &trans
+&kp INS  &kp LC(Z)                &kp LC(X)                  &kp LC(C)            &kp LC(V)            &kp DEL                    &kp CLCK  &kp LC(LEFT)  &kp PAGE_DOWN  &kp PAGE_UP  &kp LC(RIGHT)  &trans
+                                  &kp HOME                   &kp END              &trans               &trans   &trans    &trans  &trans    &trans        &trans         &trans
             >;
 
             display-name = "Navigation";
