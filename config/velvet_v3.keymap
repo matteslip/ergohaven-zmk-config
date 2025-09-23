@@ -177,7 +177,7 @@
         compatible = "zmk,combos";
 
         pastemac {
-            bindings = <&kp LS(LC(LEFT_GUI))>;
+            bindings = <&kp LS(LA(LEFT_GUI))>;
             key-positions = <44 45>;
         };
     };
