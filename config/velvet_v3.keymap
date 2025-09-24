@@ -175,12 +175,13 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
-                <&macro_press>,
+                <&macro_tap>,
                 <&kp LEFT_CONTROL &kp RIGHT>,
                 <&macro_press>,
                 <&kp LEFT_CONTROL &kp LEFT_SHIFT &kp LEFT_ARROW>,
+                <&macro_pause_for_release>,
                 <&macro_release>,
-                <&kp LEFT_CONTROL &kp LEFT_SHIFT>;
+                <&kp LEFT_CONTROL &kp LEFT_SHIFT &kp LEFT_ARROW>;
 
             label = "sel_wrd";
         };
@@ -189,12 +190,13 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
-                <&macro_press>,
+                <&macro_tap>,
                 <&kp LEFT_CONTROL &kp LEFT_ARROW>,
                 <&macro_press>,
                 <&kp LEFT_CONTROL &kp LEFT_SHIFT &kp RIGHT_ARROW>,
+                <&macro_pause_for_release>,
                 <&macro_release>,
-                <&kp LEFT_CONTROL &kp LEFT_SHIFT>;
+                <&kp LEFT_CONTROL &kp LEFT_SHIFT &kp RIGHT_ARROW>;
 
             label = "sel_wrd_right";
         };
@@ -205,8 +207,9 @@
             bindings =
                 <&macro_press>,
                 <&kp LEFT_CONTROL &kp LEFT_SHIFT &kp LEFT_ARROW>,
+                <&macro_pause_for_release>,
                 <&macro_release>,
-                <&kp LEFT_CONTROL &kp LEFT_SHIFT>;
+                <&kp LEFT_CONTROL &kp LEFT_SHIFT &kp LEFT_ARROW>;
 
             label = "EXTEND_LEFT";
         };
@@ -217,8 +220,9 @@
             bindings =
                 <&macro_press>,
                 <&kp LEFT_CONTROL &kp LEFT_SHIFT &kp RIGHT_ARROW>,
+                <&macro_pause_for_release>,
                 <&macro_release>,
-                <&kp LEFT_CONTROL &kp LEFT_SHIFT>;
+                <&kp LEFT_CONTROL &kp LEFT_SHIFT &kp RIGHT_ARROW>;
 
             label = "EXTEND_RIGHT";
         };
