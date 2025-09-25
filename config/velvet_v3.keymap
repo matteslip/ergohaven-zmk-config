@@ -178,12 +178,12 @@
             #binding-cells = <0>;
             bindings =
                 <&macro_tap>,
-                <&kp LC(RIGHT_ARROW)>,
+                <&kp LA(RIGHT_ARROW)>,
                 <&macro_press>,
-                <&kp LS(LC(LEFT_ARROW))>,
+                <&kp LS(LA(LEFT_ARROW))>,
                 <&macro_pause_for_release>,
                 <&macro_release>,
-                <&kp LS(LC(LEFT_ARROW))>;
+                <&kp LS(LA(LEFT_ARROW))>;
 
             label = "sel_wrd";
         };
@@ -193,12 +193,12 @@
             #binding-cells = <0>;
             bindings =
                 <&macro_tap>,
-                <&kp LC(LEFT_ARROW)>,
+                <&kp LA(LEFT_ARROW)>,
                 <&macro_press>,
-                <&kp LS(LC(RIGHT_ARROW))>,
+                <&kp LS(LA(RIGHT_ARROW))>,
                 <&macro_pause_for_release>,
                 <&macro_release>,
-                <&kp LS(LC(RIGHT_ARROW))>;
+                <&kp LS(LA(RIGHT_ARROW))>;
 
             label = "sel_wrd_right";
         };
@@ -208,10 +208,10 @@
             #binding-cells = <0>;
             bindings =
                 <&macro_press>,
-                <&kp LS(LC(LEFT_ARROW))>,
+                <&kp LS(LA(LEFT_ARROW))>,
                 <&macro_pause_for_release>,
                 <&macro_release>,
-                <&kp LS(LC(LEFT_ARROW))>;
+                <&kp LS(LA(LEFT_ARROW))>;
 
             label = "EXTEND_LEFT";
         };
@@ -221,10 +221,10 @@
             #binding-cells = <0>;
             bindings =
                 <&macro_press>,
-                <&kp LS(LC(RIGHT_ARROW))>,
+                <&kp LS(LA(RIGHT_ARROW))>,
                 <&macro_pause_for_release>,
                 <&macro_release>,
-                <&kp LS(LC(RIGHT_ARROW))>;
+                <&kp LS(LA(RIGHT_ARROW))>;
 
             label = "EXTEND_RIGHT";
         };
