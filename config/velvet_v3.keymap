@@ -247,7 +247,7 @@
         nav {
             bindings = <
 &kp LS(LC(TAB))  &kp EXCL                 &kp AT_SIGN                &kp HASH             &kp DOLLAR           &kp PERCENT                    &kp CARET   &kp AMPS      &kp RU_ASTRK   &kp RU_LEFT_PARENTHESIS  &kp RU_RIGHT_PARENTHESIS  &trans
-&kp LS(TAB)      &hmlsh LEFT_SHIFT LC(A)  &hmlct LEFT_CONTROL RC(S)  &hml LEFT_GUI LC(D)  &hml LEFT_ALT LC(F)  &kp K_PASTE                    &kp K_FIND  &kp LEFT      &kp DOWN       &kp UP                   &kp RIGHT                 &trans
+&kp LC(TAB)      &hmlsh LEFT_SHIFT LC(A)  &hmlct LEFT_CONTROL RC(S)  &hml LEFT_GUI LC(D)  &hml LEFT_ALT LC(F)  &kp K_PASTE                    &kp K_FIND  &kp LEFT      &kp DOWN       &kp UP                   &kp RIGHT                 &trans
 &kp CLCK         &kp LC(Z)                &kp LC(X)                  &kp LC(C)            &kp LC(V)            &kp K_COPY                     &kp K_CUT   &kp LC(LEFT)  &kp PAGE_DOWN  &kp PAGE_UP              &kp LC(RIGHT)             &trans
                                           &kp HOME                   &kp END              &trans               &trans       &trans    &trans  &trans      &trans        &select_word   &extend_word
             >;
