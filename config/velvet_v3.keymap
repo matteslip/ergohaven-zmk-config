@@ -143,6 +143,12 @@
             bindings = <&kp LS(ENTER)>;
             key-positions = <36 37>;
         };
+
+        app {
+            bindings = <&mo 5>;
+            key-positions = <39 38>;
+            layers = <0>;
+        };
     };
 
     macros {
