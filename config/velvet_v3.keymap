@@ -302,7 +302,7 @@
                 &trans  &trans     &trans  &trans         &trans    &trans  &trans  &trans  &trans  &trans
             >;
 
-            display-name = "User1";
+            display-name = "app";
         };
 
         User2 {
